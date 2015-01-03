@@ -7,9 +7,7 @@ function __autoload($class_name) {
 }
 
 /**
- * 条件：
- * 用いるデータは自然数に限る
- * データは入れ子配列で入力する
+ * 
  */
 class KMeans implements KMeansInterface {
 
@@ -148,7 +146,7 @@ class KMeans implements KMeansInterface {
      * @param type $dataPointArr
      * @return type
      */
-    private function _calcAve($dataPointArr) {//ここがカラ！！
+    private function _calcAve($dataPointArr) {
         if($dataPointArr == null) return null;
         
         $sumArr = array();
@@ -225,15 +223,11 @@ class KMeans implements KMeansInterface {
     }
 }
 
+/**
+ * Useage:
 $kmeans = new KMeans();
 var_dump($kmeans->cluster(
         array(
-/*    array(1, 1),
-    array(1, 2),
-    array(2, 1),
-    array(5, 5),
-    array(5, 6),
-    array(6, 5)*/
             array(1,1,1),
             array(1,1,0),
             array(0,0,0),
@@ -241,4 +235,4 @@ var_dump($kmeans->cluster(
         )
         , 2, "Euclid"
         ));
-
+*/
